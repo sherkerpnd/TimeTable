@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello,world</title>
+</head>
+<body>
+    <div class="text-center" id="insert"></div>
+    <div class="container">
+        <div class="row justify-content-center mx-2 mt-4 bg-light">
+            <form action="" name="firstForm" method="">
+            
+                <div class="row justify-content-center align-items-center px-2 py-2">
+                    <p class="text-center col-2 col-md-1 m-0 p-0">教師数</p>
+                    <input type="number" name="noft" min="1" max="100" class="col-2 col-md-1">
+                </div>
+                <div class="row justify-content-center px-2 py-2">
+                    <p class="text-center ">教師名</p>
+                    <textarea placeholder=",区切りで入力してください" name="tname" class="col-12 col-md-8"></textarea>
+                </div>
+                <div class="row justify-content-center align-items-center px-2 py-2">
+                    <p class="col-3 text-center col-2 col-md-1 m-0 p-0">クラス数</p>
+                    <input type="number"name="nofc" min="1" max="100" class="col-2 col-md-1">
+                </div>
+                <div class="row justify-content-center px-2 py-2">
+                    <p class="text-center">クラス名</p>
+                    <textarea placeholder=",区切りで入力してください" name="cname" class="col-12 col-md-8"></textarea>
+                </div>
+                <div class="row justify-content-center px-2 py-2">
+                    <input type="submit" value="次へ" id="nextbtn" class="col-4 col-md-3 col-lg-2">
+                    <!--<button class="col-4 col-md-3 col-lg-2" >次へ</button>-->
+                </div>
+            </form>
+            <form action="" name="secondForm" method="post">
+                <div id="nextform"></div>
+            </form>
+        </div>         
+    </div>
+    
+
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>     
