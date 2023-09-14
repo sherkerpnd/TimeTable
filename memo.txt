@@ -8,6 +8,7 @@ github pagesに載せるwebアプリケーション(JavaScript)
     曜日ごとの科目数(月,火,水,木,金)←クラスごとに時間が違う場合処理できない→クラスごとに設定する(一括で設定できるようにも)
     教師数
     教師名
+    教師ごとの担当数//追記
     クラス数(もしくは講義場所)
     クラス名
  次の入力
@@ -32,6 +33,7 @@ github pagesに載せるwebアプリケーション(JavaScript)
   class Teacher{
     classInCharge:map;
     timeSlot:2次元配列;
+    totalTime:num;//追記
   }
 　teacherArr(teacher classの配列)
   classInCharge(教師の担当クラス連想配列)(クラス名:授業数)(例:[ct1b,2],[ct2b,2],[ct3b,3])
@@ -45,4 +47,10 @@ for(let i=0; i<teacherArr.length; i++){
     while(teacherArr[i].){
       時間が決まったら、クラス、教師の配列の該当場所をfalseに変更
     }
+}
+
+↓新しく教師の担当クラス数だけの変数を追加する
+let 
+for(let i=0;i<teacherArr.length;i++){
+  ここで担当数の降順で並び替え
 }
