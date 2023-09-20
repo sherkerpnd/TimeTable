@@ -168,7 +168,10 @@ document.getElementById("toSecondBtn").addEventListener("click",function(event){
 });
 
 document.getElementById("toThirdBtn").addEventListener("click",function(event){
-
+    // 時間が確定している授業を登録
+    //例 AさんBクラス月曜4限
+    //プルダウン形式で選択できるようにしたい
+    //追加ボタンを作成
 });
 
 
