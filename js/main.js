@@ -64,6 +64,22 @@ function createTable(headText,tableHeadText,verticalArr,horizontalArr){
     return string;
 }
 
+function createPullDown(name,arr){  
+    const string = ``;
+    string += `
+    <select name="${name}" id="${name}Select">
+    `
+    for(let i=0;i<arr.length;i++){
+        string += `
+        <option value=${arr[i]}>${arr[i]}</option>
+        `
+    }
+    string += `
+        </select>    
+    `
+
+}
+
 
 document.getElementById("toSecondBtn").addEventListener("click",function(event){
     event.preventDefault();
@@ -169,9 +185,23 @@ document.getElementById("toSecondBtn").addEventListener("click",function(event){
 
 document.getElementById("toThirdBtn").addEventListener("click",function(event){
     // 時間が確定している授業を登録
-    //例 AさんBクラス月曜4限
+    //例 Aさん Bクラス 月曜 4限
     //プルダウン形式で選択できるようにしたい
-    //追加ボタンを作成
+    //追加ボタンで複製
+    const string = ``;
+    string += `
+    <select name="teacher" id="teacherSelect">
+    `
+    for(let i=0;i<teacherNameArr.length;i++){
+        string += `
+        <option value=${teachername[i]}>${teacherNameArr[i]}</option>
+        `
+    }
+    string += `
+        </select>    
+    `
+
+
 });
 
 
