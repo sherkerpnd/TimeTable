@@ -23,21 +23,22 @@ github pagesに載せるwebアプリケーション(JavaScript)
   教師の合計授業時間(入力項目(教師の担当クラスごとの授業数(int))の合計)
 
   class Class{
-    teacherInCharge:map;
-    timeSlot:2次元配列;
+      /teacherInCharge:map;←却下
+    name:string;←add
+    timeSlot:連想配列;
   }
   classArr(Class classの配列)
-  teacherInCharge(クラスの担当教員連想配列)(教師名:授業数)
-  クラスの二次元配列(boolean)(0,0=月,1限)
+  /teacherInCharge(クラスの担当教員連想配列)(教師名:授業数)←却下
+  timeslot(teacherName)(0,0=月,1限)
   
   class Teacher{
-    classInCharge:map;
-    timeSlot:2次元配列;
-    totalTime:num;//追記
+      /classInCharge:map;←却下
+    name:string;←add
+    timeSlot:連想配列;
   }
 　teacherArr(teacher classの配列)
-  classInCharge(教師の担当クラス連想配列)(クラス名:授業数)(例:[ct1b,2],[ct2b,2],[ct3b,3])
-  timeSlot(教師の二次元配列)(boolean)(0,0=月,1限)
+  /classInCharge(教師の担当クラス連想配列)(クラス名:授業数)(例:[ct1b,2],[ct2b,2],[ct3b,3])
+  timeSlot(className)(0,0=月,1限)
   
   ↓timeslotについて
   teacherclass,classclassにて同じ内容のデータが存在し、
@@ -51,7 +52,8 @@ github pagesに載せるwebアプリケーション(JavaScript)
       this.timeSlot = timeSlot;
     }
   }
-  ↑の場合
+  ↑却下
+
 
 教師の担当クラス数の降順で時間を決めていく(てことは連想配列じゃ降順めんどくさい？)
 ↓

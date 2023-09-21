@@ -1,15 +1,14 @@
 class Class{
-    constructor(teacherInCharge,timeSlot){
-        this.teacherInCharge = teacherInCharge;
+    constructor(name,timeSlot){
+        this.name = name
         this.timeSlot = timeSlot;
     }
 }
 
 class Teacher{
-    constructor(classInCharge,timeSlot,totalTime){
-        this.classInCharge = classInCharge;
+    constructor(name,timeSlot){
+        this.name = name;
         this.timeSlot = timeSlot;
-        this.totalTIme = totalTIme;
     }
 }
 const daysOfWeek = ["月","火","水","木","金"];
