@@ -94,6 +94,7 @@ document.getElementById("toSecondBtn").addEventListener("click",function(event){
     string += createTable("教員ごとの担当数","教師名",teacherNameArr,classNameArr);
     string += createTable("クラスごとのコマ数","クラス名",classNameArr,daysOfWeek);
     document.getElementById("secondInputForm").innerHTML = string;
+    document.getElementById("toThirdBtn").classList.remove("d-none");
 });
 
 document.getElementById("toThirdBtn").addEventListener("click",function(event){
