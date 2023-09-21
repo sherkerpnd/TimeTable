@@ -65,7 +65,7 @@ function createTable(headText,tableHeadText,verticalArr,horizontalArr){
 }
 
 function createPullDown(name,arr){  
-    const string = ``;
+    let string = ``;
     string += `
     <select name="${name}" id="${name}Select">
     `
@@ -77,7 +77,7 @@ function createPullDown(name,arr){
     string += `
         </select>    
     `
-
+    return string;
 }
 
 
@@ -94,93 +94,7 @@ document.getElementById("toSecondBtn").addEventListener("click",function(event){
     `
     string += createTable("教員ごとの担当数","教師名",teacherNameArr,classNameArr);
     string += createTable("クラスごとのコマ数","クラス名",classNameArr,daysOfWeek);
-    //表作成関数を作ってまとめられる
-    //     <h3>教員ごとの担当数</h3>
-    // `
-    
-    // string += `
-    // <table>
-    //     <thead>
-    //         <tr align="center">
-    //             <th>教師名</th>
-    // `
-    // for(let i=0;i<numOfClass;i++){
-    //     string += `
-    //     <th>${classNameArr[i]}</th>
-    //     `
-    // }
-    // string += `
-    //         </tr>
-    //     </thead>
-    //     <tbody>
-    // `
-    // for(let i=0;i<numOfTeacher;i++){
-    //     string +=`
-    //         <tr>
-    //         <td>${teacherNameArr[i]}</td>
-    //     `
-    //     for(let j=0;j<numOfClass;j++){
-    //         string += `
-    //         <td><input type="number" name="${teacherNameArr[i]}_${classNameArr[i]}" min="0"></td>
-    //         `
-    //     }
-    //     string += `
-    //     </tr>
-    //     `
-    // }
-    // string += `
-    //     </tbody>
-    // </table>
-    // `
-
-
-    // string += `
-    //     <h3>クラスごとのコマ数</h3>
-    // `
-    // string += `
-    // <table>
-    //     <thead>
-    //         <tr align="center">
-    //             <th>クラス名</th>
-    // `
-    // const daysOfWeek = ["月","火","水","木","金"];
-    // for(let i=0;i<daysOfWeek.length;i++){
-    //     string += `
-    //     <th>${daysOfWeek[i]}</th>
-    //     `
-    // }
-    // string += `
-    //         </tr>
-    //     </thead>
-    //     <tbody>
-    // `
-
-    // for(let i=0;i<numOfClass;i++){
-    //     string +=`
-    //         <tr>
-    //         <td>${classNameArr[i]}</td>
-    //     `
-    //     for(let j=0;j<daysOfWeek.length;j++){
-    //         string += `
-    //         <td><input type="number" name="${classNameArr[i]}_${daysOfWeek[i]}" min="0"></td>
-    //         `
-    //     }
-    //     string += `
-    //     </tr>
-    //     `
-    // }
-    // string += `
-    //     </tbody>
-    // </table>
-    // `
-
-
-    string += `
-    <div class="row justify-content-center px-2 py-2">
-        <input type="submit" value="次へ" id="toThirdBtn" class="col-4 col-md-3 col-lg-2">
-    </div>
-    `
-    document.getElementById("nextForm").innerHTML = string;
+    document.getElementById("secondInputForm").innerHTML = string;
 });
 
 document.getElementById("toThirdBtn").addEventListener("click",function(event){
@@ -188,31 +102,14 @@ document.getElementById("toThirdBtn").addEventListener("click",function(event){
     //例 Aさん Bクラス 月曜 4限
     //プルダウン形式で選択できるようにしたい
     //追加ボタンで複製
-    const string = ``;
-    string += `
-    <select name="teacher" id="teacherSelect">
-    `
-    for(let i=0;i<teacherNameArr.length;i++){
-        string += `
-        <option value=${teachername[i]}>${teacherNameArr[i]}</option>
-        `
-    }
-    string += `
-        </select>    
-    `
-
-
+    //最初は表示せずに追加したい場合ボタンを押下、ボタンを上に表示、
+    event.preventDefault();
+    console.log("btnclick");
+    let string = ``;
+    string += createPullDown("teacher",teacherNameArr);
+    string += createPullDown("class",classNameArr);
+    string += createPullDown("daysOfWeek",daysOfWeek);
+    document.getElementById("thirdInputForm").innerHTML = string;
 });
 
-
-
-    // for(let i=0; i<numOfTeacher;i++){
-    //     string += `
-    //         <h5>${teacherNameArr[i]}</h5>
-    //         <input type="number" name="numOfTeacherAssigned">
-    //     `
-    // }
-    // string += `
-    // </div>
-    // `
     

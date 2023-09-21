@@ -39,6 +39,20 @@ github pagesに載せるwebアプリケーション(JavaScript)
   classInCharge(教師の担当クラス連想配列)(クラス名:授業数)(例:[ct1b,2],[ct2b,2],[ct3b,3])
   timeSlot(教師の二次元配列)(boolean)(0,0=月,1限)
   
+  ↓timeslotについて
+  teacherclass,classclassにて同じ内容のデータが存在し、
+  データの冗長性やデータの整合性の問題を引き起こす可能性あり
+  ↓
+  教師とクラスの組み合わせをclassにまとめればOK?
+  class TeacherClass{
+    constructor(teacherName,className,timeSlot){
+      this.teacherName = teacherName;
+      this.className = className;
+      this.timeSlot = timeSlot;
+    }
+  }
+  ↑の場合
+
 教師の担当クラス数の降順で時間を決めていく(てことは連想配列じゃ降順めんどくさい？)
 ↓
 教師の合計授業時間の降順で時間を決めていく
