@@ -71,3 +71,8 @@ let
 for(let i=0;i<teacherArr.length;i++){
   ここで担当数の降順で並び替え
 }
+
+
+時間割のデータを分けるかどうか(クラス用の時間割と教師用の時間割)
+↓
+to be continued...
